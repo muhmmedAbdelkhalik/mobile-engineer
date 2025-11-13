@@ -1,0 +1,124 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Setup Chrome (for PDF generation)
+        uses: browser-actions/setup-chrome@latest
+        with:
+          chrome-version: stable
+
+      - name: Install Puppeteer
+        run: npm install puppeteer
+
+      - name: Start server and generate PDF
+        run: |
+          # Start the server in the background
+          npx serve -s dist -l 5000 &
+          SERVER_PID=$!
+
+          # Wait for server to be ready
+          echo "Waiting for server to start..."
+          sleep 5
+
+          # Check if server is running
+          curl -f http://localhost:5000 || (echo "Server failed to start" && exit 1)
+
+          # Generate PDF using Puppeteer
+          node -e "
+          const puppeteer = require('puppeteer');
+
+          (async () => {
+            const browser = await puppeteer.launch({
+              headless: 'new',
+              args: ['--no-sandbox', '--disable-setuid-sandbox']
+            });
+
+            const page = await browser.newPage();
+
+            // Navigate to CV page
+            await page.goto('http://localhost:5000/mobile-engineer/cv', {
+              waitUntil: 'networkidle0',
+              timeout: 30000
+            });
+
+            // Wait a bit for fonts and styles to load
+            await page.waitForTimeout(2000);
+
+            // Generate PDF
+            await page.pdf({
+              path: 'dist/CV.pdf',
+              format: 'A4',
+              printBackground: true,
+              margin: {
+                top: '1cm',
+                right: '1cm',
+                bottom: '1cm',
+                left: '1cm'
+              }
+            });
+
+            console.log('PDF generated successfully!');
+            await browser.close();
+          })();
+          "
+
+          # Kill the server
+          kill $SERVER_PID || true
+
+      - name: Verify PDF was created
+        run: |
+          if [ -f dist/CV.pdf ]; then
+            echo "✓ CV.pdf was created successfully"
+            ls -lh dist/CV.pdf
+          else
+            echo "✗ CV.pdf was not created"
+            exit 1
+          fi
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
