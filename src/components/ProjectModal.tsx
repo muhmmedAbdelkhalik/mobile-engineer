@@ -76,11 +76,11 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             {/* Content */}
             <div className="p-6 md:p-8">
               {/* Project Image */}
-              <div className="mb-6">
+              <div className="mb-6 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 rounded-xl flex items-center justify-center p-8">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-64 object-cover rounded-lg"
+                  className="max-h-64 w-auto object-contain drop-shadow-2xl"
                   onError={e => {
                     e.currentTarget.src =
                       'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"%3E%3Crect width="400" height="300" fill="%23e5e7eb"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="24" fill="%239ca3af"%3EProject Image%3C/text%3E%3C/svg%3E'

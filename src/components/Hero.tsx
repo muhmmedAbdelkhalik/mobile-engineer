@@ -41,18 +41,28 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Profile Image Placeholder */}
+          {/* Profile Image */}
           <motion.div
             className="flex-shrink-0"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center shadow-2xl">
-              <span className="text-white text-8xl font-bold">
-                {siteMeta.name.charAt(0)}
-              </span>
-            </div>
+            {siteMeta.profileImage ? (
+              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl ring-4 ring-primary-200 dark:ring-primary-800">
+                <img
+                  src={siteMeta.profileImage}
+                  alt={siteMeta.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ) : (
+              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center shadow-2xl">
+                <span className="text-white text-8xl font-bold">
+                  {siteMeta.name.charAt(0)}
+                </span>
+              </div>
+            )}
           </motion.div>
         </div>
       </div>

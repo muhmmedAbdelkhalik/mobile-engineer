@@ -23,6 +23,7 @@ export const resume: Resume = {
         'iOS (Swift, SwiftUI)',
         'Android (Kotlin, Jetpack Compose)',
         'React Native',
+        'Ionic (Angular)',
       ],
     },
     {
@@ -46,14 +47,14 @@ export const resume: Resume = {
         'Firebase',
         'Supabase',
         'WebSocket',
-        'gRPC',
+        'Laravel',
+        'PHP'
       ],
     },
     {
       category: 'DevOps & Tools',
       items: [
-        'CI/CD (GitHub Actions, Bitrise, Codemagic)',
-        'Git & GitHub',
+        'CI/CD (GitHub Actions, Codemagic)',
         'Docker',
         'Fastlane',
         'Testing (Unit, Widget, Integration)',

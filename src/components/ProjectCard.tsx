@@ -15,12 +15,12 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
       transition={{ duration: 0.2 }}
     >
       {/* Project Image - Lazy loading with placeholder */}
-      <div className="relative h-48 mb-4 bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden">
+      <div className="relative h-48 mb-4 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 rounded-lg overflow-hidden flex items-center justify-center p-6">
         <img
           src={project.image}
           alt={project.title}
           loading="lazy"
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          className="max-w-full max-h-full w-auto h-auto object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-lg rounded-2xl"
           onError={e => {
             // Fallback to placeholder if image fails to load
             e.currentTarget.src =
@@ -28,7 +28,7 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
           }}
         />
         {project.featured && (
-          <div className="absolute top-2 right-2 bg-primary-600 text-white text-xs font-semibold px-2 py-1 rounded">
+          <div className="absolute top-3 right-3 bg-primary-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg">
             Featured
           </div>
         )}

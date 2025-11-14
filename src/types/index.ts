@@ -7,6 +7,7 @@ export interface SiteMeta {
   github: string
   linkedin: string
   bio: string
+  profileImage?: string
 }
 
 export interface Project {
