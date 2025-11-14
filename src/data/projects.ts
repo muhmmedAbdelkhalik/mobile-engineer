@@ -26,7 +26,7 @@ export const projects: Project[] = [
       "Multi-environment",
       "Interceptors"
     ],
-    "image": "/projects/tactical-mobile.png",
+    "image": "/mobile-engineer/projects/tactical-mobile.png",
     "links": {
       appStore: 'https://apps.apple.com/eg/app/tactical-%D8%AA%D9%83%D8%AA%D9%8A%D9%83%D9%8A/id6739902280',
       playStore: 'https://play.google.com/store/apps/details?id=com.awoon.tactical',
@@ -52,7 +52,7 @@ export const projects: Project[] = [
       'Multiple Flavors',
       'SDLC',
     ],
-    image: '/projects/erwaa.png',
+    image: '/mobile-engineer/projects/erwaa.png',
     links: {
       appStore: 'https://apps.apple.com/eg/app/erwaa-%D8%A5%D8%B1%D9%88%D8%A7%D8%A1/id1390956979',
       playStore: 'https://play.google.com/store/apps/details?id=com.erwaa.android',
@@ -73,7 +73,7 @@ export const projects: Project[] = [
       'UI/UX Implementation',
       'Market Launch',
     ],
-    image: '/projects/maraya.png',
+    image: '/mobile-engineer/projects/maraya.png',
     links: {
       appStore:
         'https://apps.apple.com/ae/app/maraya-%D9%85%D8%B1%D8%A7%D9%8A%D8%A7/id6511243162',
@@ -95,7 +95,7 @@ export const projects: Project[] = [
       'Crashlytics',
       'Full-Stack Development',
     ],
-    image: '/projects/urnt.png',
+    image: '/mobile-engineer/projects/urnt.png',
     links: {
       appStore: 'https://apps.apple.com/sa/app/urnt-%D9%8A%D9%88%D8%B1%D9%8A%D9%86%D8%AA/id6474184986?l=ar',
     },
@@ -108,7 +108,7 @@ export const projects: Project[] = [
     longDescription:
       'Developed Dshopper from the ground up for Wothoq company. Handled complete development lifecycle from initial concept through to production deployment on both iOS and Android platforms.',
     tech: ['Flutter', 'Full-Stack Development', 'iOS', 'Android'],
-    image: '/projects/dshopper.png',
+    image: '/mobile-engineer/projects/dshopper.png',
     links: {
       appStore: 'https://apps.apple.com/sa/app/d-shopper/id6670364999?l=ar',
       playStore:
@@ -131,7 +131,7 @@ export const projects: Project[] = [
       'Crashlytics',
       'Food Delivery',
     ],
-    image: '/projects/cave.png',
+    image: '/mobile-engineer/projects/cave.png',
     links: {
       appStore: 'https://apps.apple.com/eg/app/cave-eat-play/id1553688456',
     },
@@ -144,7 +144,7 @@ export const projects: Project[] = [
     longDescription:
       'Developed Mahshihub for Remood Inc. from initial development phase to production. Implemented multiple features including FCM and Crashlytics. Created using Stacked architecture pattern.',
     tech: ['Flutter', 'Stacked Architecture', 'Provider', 'FCM', 'Crashlytics'],
-    image: '/projects/mahshihub.png',
+    image: '/mobile-engineer/projects/mahshihub.png',
     links: {
       appStore: 'https://apps.apple.com/eg/app/mahshihub/id1625504918',
     },
@@ -167,7 +167,7 @@ export const projects: Project[] = [
       'Crashlytics',
       'Dynamic Links',
     ],
-    image: '/projects/jawhara.png',
+    image: '/mobile-engineer/projects/jawhara.png',
     links: {
       appStore: 'https://apps.apple.com/eg/app/%D8%AC%D9%88%D9%87%D8%B1%D9%87-%D8%AA%D8%B3%D9%88%D9%82-%D8%A3%D9%88%D9%86%D9%84%D8%A7%D9%8A%D9%86/id1565162947',
       playStore:
@@ -190,7 +190,7 @@ export const projects: Project[] = [
       'Payment Gateway',
       'E-commerce',
     ],
-    image: '/projects/radwa-express.png',
+    image: '/mobile-engineer/projects/radwa-express.png',
     links: {
       appStore: 'https://apps.apple.com/eg/app/radwa-express-%D8%B1%D8%B6%D9%88%D9%89-%D8%A5%D9%83%D8%B3%D8%A8%D8%B1%D9%8A%D8%B3/id1536911687',
       playStore:
@@ -211,7 +211,7 @@ export const projects: Project[] = [
       'UI Development',
       'REST API',
     ],
-    image: '/projects/johrh.png',
+    image: '/mobile-engineer/projects/johrh.png',
     links: {
       appStore: 'https://apps.apple.com/eg/app/%D8%B9%D8%A8%D8%A7%D9%8A%D8%A7%D8%AA-%D8%AC%D9%88%D9%87%D8%B1%D8%A9/id1481960464',
     },
