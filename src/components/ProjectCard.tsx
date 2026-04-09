@@ -60,21 +60,52 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
       </div>
 
       {/* View Details Link */}
-      <div className="flex items-center text-primary-600 dark:text-primary-400 font-medium group-hover:underline">
-        View Details
-        <svg
-          className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 5l7 7-7 7"
-          />
-        </svg>
+      <div className="flex items-center justify-between gap-3">
+        <div className="flex items-center text-primary-600 dark:text-primary-400 font-medium group-hover:underline">
+          View Details
+          <svg
+            className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </div>
+
+        {(project.links.appStore || project.links.playStore) && (
+          <div className="flex items-center gap-2">
+            {project.links.appStore && (
+              <a
+                href={project.links.appStore}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={e => e.stopPropagation()}
+                aria-label={`${project.title} on App Store`}
+                className="text-xs px-2 py-1 rounded bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors"
+              >
+                App Store
+              </a>
+            )}
+            {project.links.playStore && (
+              <a
+                href={project.links.playStore}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={e => e.stopPropagation()}
+                aria-label={`${project.title} on Play Store`}
+                className="text-xs px-2 py-1 rounded bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors"
+              >
+                Play Store
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </motion.div>
   )
