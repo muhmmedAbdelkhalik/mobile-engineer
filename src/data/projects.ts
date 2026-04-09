@@ -98,6 +98,7 @@ export const projects: Project[] = [
     image: '/mobile-engineer/projects/urnt.png',
     links: {
       appStore: 'https://apps.apple.com/sa/app/urnt-%D9%8A%D9%88%D8%B1%D9%8A%D9%86%D8%AA/id6474184986?l=ar',
+      playStore: 'https://play.google.com/store/apps/details?id=com.urnt.urntapp',
     },
     featured: false,
   },
