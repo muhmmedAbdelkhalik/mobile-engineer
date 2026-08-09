@@ -36,7 +36,7 @@ A modern, responsive portfolio website for a Senior Flutter Engineer built with 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/mobile-engineer.git
+   git clone https://github.com/muhmmedAbdelkhalik/mobile-engineer.git
    cd mobile-engineer
    ```
 
@@ -161,8 +161,8 @@ Place `profile.jpg` in the `public/` folder.
 
 3. **Wait for deployment**
    - GitHub Actions will automatically build and deploy
-   - Your site will be live at: `https://your-username.github.io/mobile-engineer/`
-   - CV PDF will be available at: `https://your-username.github.io/mobile-engineer/CV.pdf`
+   - Your site will be live at: `https://muhmmedabdelkhalik.github.io/mobile-engineer/`
+   - CV PDF will be available at: `https://muhmmedabdelkhalik.github.io/mobile-engineer/CV.pdf`
 
 ### Manual Deployment
 
@@ -188,7 +188,7 @@ The GitHub Actions workflow automatically generates a PDF during deployment:
 
 The generated PDF is then accessible at:
 ```
-https://your-username.github.io/mobile-engineer/CV.pdf
+https://muhmmedabdelkhalik.github.io/mobile-engineer/CV.pdf
 ```
 
 ## 🎨 Theme Customization
@@ -376,14 +376,14 @@ npm run dev      # تشغيل السيرفر المحلي
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/your-username/mobile-engineer/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/muhmmedAbdelkhalik/mobile-engineer/issues).
 
 ## 👤 Author
 
 **Mohammed**
-- Location: Dubai (Remote)
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [your-profile](https://linkedin.com/in/your-profile)
+- Location: Egypt, Cairo (Remote)
+- GitHub: [@muhmmedAbdelkhalik](https://github.com/muhmmedAbdelkhalik)
+- LinkedIn: [moh-elabd](https://www.linkedin.com/in/moh-elabd/)
 
 ---
 
