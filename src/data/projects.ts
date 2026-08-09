@@ -2,6 +2,27 @@ import type { Project } from '../types'
 
 export const projects: Project[] = [
   {
+    id: 'seven',
+    title: 'SEVEN | سڤن',
+    description: "Entertainment super-app for Qiddiya's SEVEN destinations, built at Globant",
+    longDescription:
+      "Working at Globant on SEVEN, the official app for Qiddiya's SEVEN entertainment destinations across Saudi Arabia. The app lets users discover nearby SEVEN venues, browse attractions and events, book tickets with seamless in-app payments, and access personalized offers and experiences tailored to their interests. Built with a focus on performance, localization (English/Arabic), and a smooth booking flow across iOS and Android.",
+    tech: [
+      'Flutter',
+      'Clean Architecture',
+      'Booking & Payments',
+      'Multi-language (i18n)',
+      'iOS',
+      'Android',
+    ],
+    image: '/mobile-engineer/projects/seven.png',
+    links: {
+      appStore: 'https://apps.apple.com/us/app/seven-%D8%B3%DA%A4%D9%86/id6768239349',
+      playStore: 'https://play.google.com/store/apps/details?id=com.qiddiya.sevensa&pli=1',
+    },
+    featured: true,
+  },
+  {
     "id": "tactical-mobile",
     "title": "Tactical Mobile",
     "description": "Sports prediction app with real-time chat, leaderboards, and social features",

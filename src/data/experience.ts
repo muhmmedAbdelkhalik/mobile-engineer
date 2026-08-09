@@ -2,6 +2,19 @@ import type { Experience } from '../types'
 
 export const experiences: Experience[] = [
   {
+    id: 'globant',
+    company: 'Globant',
+    position: 'Senior Flutter Engineer',
+    period: 'Dec 2025 – Present',
+    startDate: '2025-12',
+    endDate: 'Present',
+    description: [
+      "Working on SEVEN, the official app for Qiddiya's SEVEN entertainment destinations across Saudi Arabia.",
+      'Building destination discovery, ticket booking, and personalized experience features across iOS and Android.',
+    ],
+    tech: ['Flutter', 'Clean Architecture', 'iOS', 'Android'],
+  },
+  {
     id: 'cander',
     company: 'Cander',
     position: 'Senior Flutter Engineer',
