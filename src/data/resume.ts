@@ -5,7 +5,7 @@ import { experiences } from './experience'
 export const resume: Resume = {
   personal: siteMeta,
   summary:
-    'Senior Mobile Engineer with 8+ years experience in mobile development and 6+ years specializing in Flutter. Expert in clean architecture, state management (BLoC, GetX, Provider, Cubit), CI/CD, Firebase, REST/GraphQL, and payment integrations. Delivered 30+ apps across multiple domains.',
+    'Senior Mobile Engineer with 8+ years of experience delivering 30+ production-ready mobile applications across e-commerce, fintech, logistics, and enterprise sectors. Proven expertise in Flutter, iOS, and Android development with Clean Architecture, MVVM, and BLoC patterns. Strong track record of achieving 99.5% crash-free rates, reducing deployment time by 87%, and leading cross-functional teams of 8+ members to successful market launches.',
   experience: experiences,
   education: [
     {
@@ -18,58 +18,44 @@ export const resume: Resume = {
   skills: [
     {
       category: 'Mobile Development',
-      items: [
-        'Flutter (6+ years)',
-        'iOS (Swift, SwiftUI)',
-        'Android (Kotlin, Jetpack Compose)',
-        'React Native',
-        'Ionic (Angular)',
-      ],
+      items: ['Flutter', 'Dart', 'Swift / SwiftUI', 'Kotlin / Jetpack Compose'],
     },
     {
-      category: 'Architecture & Patterns',
+      category: 'Architecture & State Management',
       items: [
         'Clean Architecture',
+        'MVVM / MVC',
+        'Modular Monorepos',
+        'Micro-frontend',
         'Domain-Driven Design (DDD)',
-        'SOLID Principles',
         'Design Patterns',
+        'BLoC / Cubit',
+        'GetX / Riverpod',
+        'Provider',
       ],
     },
     {
-      category: 'State Management',
-      items: ['BLoC', 'GetX', 'Provider', 'Cubit', 'Riverpod', 'Redux'],
-    },
-    {
-      category: 'Backend & APIs',
+      category: 'Cloud & Integration',
       items: [
-        'REST API',
-        'GraphQL',
-        'Firebase',
-        'Supabase',
-        'WebSocket',
-        'Laravel',
-        'PHP'
-      ],
-    },
-    {
-      category: 'DevOps & Tools',
-      items: [
-        'CI/CD (GitHub Actions, Codemagic)',
-        'Docker',
+        'Firebase / Supabase',
+        'REST API / GraphQL',
+        'Payment Integration',
         'Fastlane',
-        'Testing (Unit, Widget, Integration)',
+        'GitHub Actions',
+        'Bitrise',
       ],
     },
     {
-      category: 'Additional Skills',
-      items: [
-        'Payment Integrations',
-        'Push Notifications',
-        'Analytics',
-        'Crash Reporting',
-        'Performance Optimization',
-        'Code Review & Mentoring',
-      ],
+      category: 'Databases & Storage',
+      items: ['Hive / NoSQL', 'Shared Preferences / Secure Storage'],
+    },
+    {
+      category: 'Testing & CI/CD',
+      items: ['Unit Testing', 'Widget Testing', 'Mockito', 'CI/CD Code Coverage Optimization'],
+    },
+    {
+      category: 'AI Tools',
+      items: ['Cursor', 'Claude Code', 'Antigravity'],
     },
   ],
 }
